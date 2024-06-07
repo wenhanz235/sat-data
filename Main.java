@@ -21,11 +21,25 @@ public class Main {
     catch(Exception e){
       System.out.println("file not found");
     }
-
+    int total=0;
+    int count=0;
+    for (int i: totalScore){
+      total+=i;
+      count++;
+    }
+    double average= (double)total/count;
     // make sure all data entered the ArrayList
+    System.out.println(average);
     System.out.println(totalScore);
     System.out.println(totalScore.size());
-    
+    int min=totalScore.get(0);
+    int max=totalScore.get(0);
+ for (int k:totalScore){
+   min=Math.min(min,k);
+   max=Math.max(max,k);
+ }
+    System.out.println(min);
+    System.out.println(max);
   }
 
 }
